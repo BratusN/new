@@ -1,0 +1,57 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+
+    <UserSecretsId>0f235d43-b503-445e-8d5a-bde0f810afc7</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="appsettings.json" />
+    <None Remove="identityconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appsettings.json">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="identityconfig.json">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IdentityModel" Version="4.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="2.2.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="2.2.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.TestHost" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.2.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.0.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.3.0" />
+    <PackageReference Include="nunit" Version="3.12.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.15.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\IdentityServerAspNetIdentity\IdentityServerAspNetIdentity.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNetCore.Hosting">
+      <HintPath>..\..\..\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.aspnetcore.hosting\2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Hosting.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

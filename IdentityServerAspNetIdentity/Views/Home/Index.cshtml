@@ -1,0 +1,28 @@
+@using IdentityServerAspNetIdentity
+@{
+    var version = GetType().Assembly.GetName().Version.ToString();
+}
+<div class="welcome-page">
+    <div class="row page-header">
+        <div class="col-sm-10">
+            <h1>
+                <img class="icon" src="~/icon.jpg">
+                Cooltool authentication<br>
+                The page is only available for development
+                <small>(version @version)</small>
+            </h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8">
+            <p>
+                <a href="~/.well-known/openid-configuration">metadata and links to all the endpoints for IdentityServer</a>
+            </p>
+        </div>
+        <div class="col-sm-8">
+            <p>
+                Click <a href="~/account/login">here</a> to login.
+            </p>
+        </div>
+    </div>
+</div>
